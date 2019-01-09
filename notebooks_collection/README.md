@@ -1,4 +1,22 @@
-# Instructions for running the Notebooks on Cirrus
+# Installation tips
+
+## Brief instructions for running the Notebooks locally (tested on a Mac)
+
+- it's important to set things up in this order
+
+1. Install Spark (which should also include the PySpark API)
+2. Do one of the following:
+   - install miniconda (which is just a package manager), and then use conda to install numpy & jupyter
+   - install anaconda (full package manager and lots of packages / modules)
+3. Go to a suitable directory and `clone` the material from github
+4. `cd` to the `notebooks_collection` directory
+5. create a conda env and activate it
+6. Before worrying about Jupyter, let's check everything works in the terminal: run `pyspark` and try importing `numpy` (this should just work). Exit `exit()`
+7. run `export PYSPARK_DRIVER_PYTHON_OPTS='notebook'` and `export PYSPARK_DRIVER_PYTHON=jupyter`
+8. run `pyspark` again - this should open the Jupyter notebook in your browser
+9. All the examples and lab exercises should be runnable and work
+
+## Instructions for running the Notebooks on Cirrus
 
 1. Login to Cirrus by opening a terminal window and typing `ssh <username>@login.cirrus.ac.uk`, where `<username>` is the username given to you, and using your password
 2. _Checkout_ this GitHub repository, by typing this command: `git clone https://github.com/rosafilgueira/Spark_Training_Material` - wait until the whole repository has been checked out before continuing
